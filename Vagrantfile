@@ -12,7 +12,26 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "fedora-22"
+  #config.vm.box = "fedora-22"
+  
+
+
+
+
+
+  #==========================================#
+  #I use community image just because I have troubles with image uploading to Atlas
+  #You can use packer to build fedora-22 via  fedora-22-VB-x86_64.json for virtualbox 
+  #and fedora-22-x86_64.json for libvirt
+  #==========================================#
+
+
+
+
+
+
+
+  config.vm.box = "box-cutter/fedora22"
 
   config.vm.hostname = "fedora.msk.pp.ua"
 
@@ -33,7 +52,7 @@ Vagrant.configure(2) do |config|
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-  # config.vm.network "public_network"
+   config.vm.network "public_network"
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
